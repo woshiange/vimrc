@@ -11,7 +11,10 @@ Plugin 'powerline/powerline' "power line
 Plugin 'bling/vim-airline' " Lean & mean status/tabline for vim                                                                        
 Plugin 'vim-airline/vim-airline-themes' " Themes for airline                                                                           
 Plugin 'xolox/vim-misc' "for vim notes                                                                                                 
-Plugin 'xolox/vim-notes' "for vim notes                                                                                                
+Plugin 'xolox/vim-notes' "for vim notes
+Plugin 'christoomey/vim-tmux-runner'
+Plugin 'dense-analysis/ale' " requires pip install flake8
+Plugin 'Yggdroot/indentLine'
                                                                                                                                        
 call vundle#end()                                                                                                                      
 filetype plugin indent on                                                                                                              
@@ -42,3 +45,6 @@ autocmd ColorScheme *
                                                                                                                                        
 " enable all Python syntax highlighting features                                                                                       
 let python_highlight_all = 1
+
+map <Leader>o :VtrOpenRunner<CR>
+map <Leader>s :VtrSendLinesToRunner<CR>
