@@ -25,6 +25,7 @@ Plug 'ojroques/vim-oscyank'
 call plug#end()
 
 colorscheme gruvbox
+set bg=light
 let g:airline_theme='gruvbox'
 
 let g:netrw_liststyle = 3
@@ -38,3 +39,6 @@ endif
 lua require 'colorizer'.setup()
 
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
+
+" enter to validate coc autocomplete
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
